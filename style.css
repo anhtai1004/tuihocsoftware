@@ -1,0 +1,238 @@
+* {
+     /* make all element in header to fit  */
+     box-sizing: border-box;
+}
+body {
+     padding: 0px;
+     margin: 0px;
+     background: #f6f6f6;
+     font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'Candal', serif;
+     color: #444;
+     margin: 5px;
+}
+
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
+header {
+     background: #008489;
+     height: 66px;
+}
+
+/* text color on header change to white */
+header * {
+     color: white;
+}
+
+header .logo {
+     float: left;
+     height: 66px;
+     margin-left: 2em;
+     /* border: 1px solid red; => easy to write code*/
+}
+
+header .logo-text {
+     font-family: 'Candal', serif;
+     margin: 12px;
+}
+
+header .logo-text span {
+     color: rgb(19, 222, 236)
+}
+
+header ul {
+     list-style: none;
+     float: right;
+     margin: 0px;
+     padding: 0px;
+     /* border: 1px solid red; */
+}
+
+header ul li {
+     float: left;
+     position: relative;
+}
+header ul li ul {
+     position: absolute;
+     top: 66px;
+     right: 0px;
+     width: 180px;
+     display: none;
+     z-index: 88888;
+}
+
+header ul li:hover ul {
+     /* transition: 1s; */
+     display: block;
+}
+
+header ul li ul li {
+     width: 100%;
+}
+
+header ul li ul li a {
+     padding: 10px;
+     background: white;
+     color: #444;
+}
+
+header ul li ul li a:hover {
+     background: #d5d6d6;
+}
+
+header ul li ul li a.logout {
+     color: red;
+}
+
+/* header ul li ul li a.logout_1 {
+     color: black;
+} */
+
+header ul li a {
+     display: block;
+     padding: 21px;
+     font-size: 1.1em;
+     text-decoration: none;
+}
+
+header ul li a:hover {
+     background: #006669;
+     transition: 0.5s;
+}
+
+
+header .menu-toggle {
+     display: none;
+     cursor: pointer;
+}
+
+.page_wrapper a:hover {
+     color: #006669;
+}
+/* Dung 28:14 */
+
+/* POST SLIDER */
+.post-slider {
+     position: relative;
+     /* border: 1px dashed red; */
+}
+
+.post-slider .slider-title {
+     text-align: center;
+     margin: 30px auto;
+}
+
+.post-slider .next {
+     position: absolute;
+     top: 50%;
+     right: 30px;
+     font-size: 2rem;
+     color: #006669;
+     cursor: pointer;
+}
+
+.post-slider .prev {
+     position: absolute;
+     top: 50%;
+     left: 30px;
+     font-size: 2rem;
+     color: #006669;
+     cursor: pointer;
+}
+
+.post-slider .post-wrapper {
+     width: 84%;
+     height: 400px;
+     margin: 0px auto;
+     overflow: hidden;
+     padding: 20px 0px 20px 0px;
+     
+}
+
+.post-slider .post-wrapper .post {
+     height: 400px;
+     width: 300px;
+     margin: 0px 10px;
+     display: inline-block; /* để nó tự co lại theo chỉ mình nó*/
+     background: white;
+     border-radius: 5px;
+     box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info {
+     height: 130px;
+     padding: 0px 5px; 
+     
+}
+
+.post-slider .post-wrapper .post .slider-image {
+     width: 100%;
+     height: 200px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+
+
+
+
+
+
+/* Media queries */
+@media only screen and (max-width: 850px) {
+     header {
+          position: relative;
+     }
+
+     header ul {
+          width: 100%;
+          background: #0E94A0;
+          max-height: 0px;
+          overflow: hidden;
+     }
+     
+     .showing {
+          max-height: 100em;
+     }
+
+     header ul li {
+          width: 100%;
+     }
+
+     header ul li ul {
+          position: static;
+          display: block;
+          width: 100%;
+     }
+
+     header ul li ul li a {
+          padding: 10px;
+          background: #0E94A0;
+          color: white;
+          padding-left: 50px;
+     }
+
+     header ul li ul li a:hover {
+          background: #006669;
+     }
+
+     header .menu-toggle {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          font-size: 1.9em;
+     }
+
+     header .logo {
+          margin-left: .5em;
+          /* border: 1px solid red; => easy to write code*/
+     }
+}
+
